@@ -1,0 +1,74 @@
+.menu-header {
+    text-align: center; /* Centra el encabezado "Our Menu" */
+    margin-bottom: 20px; /* Espacio entre el encabezado y las secciones */
+}
+
+.contenido-seccion {
+    position: relative;
+    border: 1px solid black;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.contenido-seccion h3,
+.contenido-seccion h4,
+.contenido-seccion h5 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    margin: 0;
+    z-index: 1;
+    width: 100px; /* Ancho fijo para los rectángulos pequeños */
+    text-align: center; /* Centrar el texto dentro del rectángulo */
+    font-size: 20px; /* Tamaño de fuente para los títulos pequeños */
+}
+
+.contenido-seccion h3 {
+    background-color: #9e0000; /* Rojo oscuro */
+    color: #000; /* Color de texto negro */
+}
+
+.contenido-seccion h4 {
+    background-color: #c96d7c; /* Rosa */
+    color: #fff; /* Color de texto blanco */
+}
+
+.contenido-seccion h5 {
+    background-color: #d5db7d; /* Amarillo */
+    color: #000; /* Color de texto negro */
+}
+
+.contenido-seccion p {
+    margin-top: 30px;
+}
+
+/* Media queries para tablet y móvil, si es necesario */
+@media (max-width: 991px) {
+    .contenido-seccion {
+        width: 50%;
+        float: left;
+        margin-right: 0;
+    }
+    .contenido-seccion:last-child {
+        clear: both;
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .contenido-seccion {
+        width: 100%;
+        float: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .contenido-seccion {
+        width: calc(33.33% - 20px);
+        float: left;
+        margin-right: 20px;
+    }
+}
